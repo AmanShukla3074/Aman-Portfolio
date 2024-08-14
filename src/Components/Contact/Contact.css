@@ -1,0 +1,176 @@
+.contact {
+  margin: 150px auto;
+  width: 80%;
+}
+
+.contact-header {
+  font-size: 35px;
+  text-align: center;
+}
+
+.contact-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.contact-left {
+  width: 45%;
+}
+
+.contact-left h2 {
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+.contact-left p {
+  font-size: 21px;
+  margin: 10px 0;
+}
+
+.contact-details {
+  margin: 50px 0;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  margin: 15px 0;
+  font-size: 25px;
+}
+
+.contact-detail p {
+  font-size: 20px;
+  margin: 0;
+}
+
+.contact-detail p a {
+  text-decoration: none;
+  color: white;
+}
+
+.contact-right {
+  width: 45%;
+}
+
+.contact-form {
+  background-color: #161513;
+  border-radius: 5px;
+  padding: 30px 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+}
+
+.contact-form label {
+  font-size: 20px;
+}
+
+.contact-form input {
+  font-size: 17px;
+  /* padding: 8px 0; */
+  padding: 8px 0 8px 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.contact-form textarea {
+  font-size: 17px;
+  /* padding: 5px 0 ; */
+  padding: 5px 0 5px 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.contact-submit {
+  margin-top: 10px;
+  font-size: 20px;
+  background: white;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  transition: 0.4s;
+}
+
+.contact-submit:hover {
+  background-color: #be14ef;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    margin: 80px auto;
+    width: 90%;
+  }
+
+  .contact-header {
+    font-size: 32px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .contact-left {
+    width: 100%;
+  }
+
+  .contact-details {
+    margin: 40px 0;
+  }
+
+  .contact-right {
+    width: 100%;
+  }
+
+  .contact-form {
+    padding: 20px 35px;
+    gap: 12px;
+  }
+
+  .contact-form label {
+    font-size: 18px;
+  }
+
+  .contact-submit {
+    font-size: 18px;
+    padding: 8px;
+    text-align: center;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    transition: 0.4s;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-left h2 {
+    font-size: 26px;
+  }
+
+  .contact-left p {
+    font-size: 19px;
+    margin: 8px 0;
+  }
+
+  .contact-details {
+    margin: 30px 0;
+  }
+
+  .contact-detail {
+    margin: 6px 0;
+  }
+  .contact-form{
+    padding: 20px;
+  }
+}
