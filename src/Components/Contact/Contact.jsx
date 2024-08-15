@@ -1,32 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import { CiMail } from "react-icons/ci";
 import { IoCallOutline, IoLocationOutline } from "react-icons/io5";
 import './Contact.css'
-
+import emailjs from '@emailjs/browser'
 const Contact = () => { 
-  const onSubmit = async (event) => {
+
+  // const [user_name,setContactData] = useState([{user_name:'',user_email:'',message:''}])
+  const [email,setEmail] = useState('')
+  const [name,setName] = useState('')
+  const [message,setMessage] = useState('')
+
+
+  const onSubmit = (event) => {
     event.preventDefault();
-    const formData = new FormData(event.target);
 
-    formData.append("access_key", "176c1352-5049-4ba5-ae27-f547f197eb4a");
-    // formData.append("access_key", "fa324ca0-2023-4a8c-8a84-0f748fb1bf7a");
+    const serviceId = import.meta.env.EMAILJS_SERVICE_ID
+    const templeteId = import.meta.env.EMAILJS_TEMPLATE_ID
+    const publickey = import.meta.env.EMAILJS_PUBLIC_KEY
+   
 
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
-
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json"
-      },
-      body: json,
-      mode: 'no-cors'
-    }).then((res) => res.json());
-
-    if (res.success) {
-      console.log("Success", res);
+    const templeteParams ={
+      user_name:name,
+      user_email:email,
+      message:message,
+      to_name: 'Aman Shukla'
     }
+
+    emailjs.send(serviceId,templeteId,templeteParams,publickey)
+    .then((res)=>{
+      console.log('email sended',res);
+      setEmail('');
+      setName('');
+      setMessage('');
+    })
+    .catch((err)=>{
+      console.log('caught err',err);
+    })
+    
   };
 
 
@@ -56,11 +66,11 @@ const Contact = () => {
       <div className="contact-right">
         <form onSubmit={onSubmit} className="contact-form">
             <label htmlFor="">Your Name :</label>
-            <input type="text" name="name" placeholder="Enter Your Name" />
+            <input type="text" name="name" placeholder="Enter Your Name" required onChange={(e)=>{setName(e.target.value)}}/>
             <label htmlFor="">Your Email :</label>
-            <input type="email" name="email" placeholder="Enter Your Email" />
+            <input type="email" name="email" placeholder="Enter Your Email"  required  onChange={(e)=>{setEmail(e.target.value)}}/>
             <label htmlFor="">Your Message :</label>
-            <textarea name="message" rows="10" placeholder="Enter Your Message"></textarea>
+            <textarea name="message" rows="10" placeholder="Enter Your Message" required  onChange={(e)=>{setMessage(e.target.value)}}></textarea>
             <button type="submit" className="contact-submit">Send Message</button>
         </form>
       </div>
