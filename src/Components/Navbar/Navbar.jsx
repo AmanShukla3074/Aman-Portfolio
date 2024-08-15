@@ -4,7 +4,7 @@ import logo from '../../assets/AMAN-Nav-Logo-NoBG.png'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { IoCloseOutline } from 'react-icons/io5'
 import { GiHamburgerMenu } from 'react-icons/gi'
-
+import resume from '../../assets/aman_shukla_cv_aug.pdf'
 const Navbar = () => {
 
   const [menuOpen,setMenuOpen]=useState(false);
@@ -22,7 +22,10 @@ const Navbar = () => {
             <li className='navlinks-li' onClick={()=>{setMenuOpen(false)}}> <AnchorLink className='anchor-link' offset={120} href='#skills'> Skills </AnchorLink></li>
             <li className='navlinks-li' onClick={()=>{setMenuOpen(false)}}> <AnchorLink className='anchor-link' offset={120} href='#projects'> Projects </AnchorLink></li>
             <li className='navlinks-li' onClick={()=>{setMenuOpen(false)}}> <AnchorLink className='anchor-link' offset={120} href='#contact'> Contact Me </AnchorLink></li>
-            <li className='navbar-resume'>Resume</li>
+            {/* <li className='navbar-resume'>Resume</li> */}
+            <li className='navbar-resume'>
+              <a href={resume} download="Aman Shukla Resume">Resume</a>
+            </li>
         </ul>
             {!menuOpen && < GiHamburgerMenu onClick={()=>{setMenuOpen(true)}}  className='menu-icons-open'/>}
       </div>

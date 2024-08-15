@@ -8,24 +8,25 @@ const Contact = () => {
     event.preventDefault();
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "fa324ca0-2023-4a8c-8a84-0f748fb1bf7a");
+    formData.append("access_key", "176c1352-5049-4ba5-ae27-f547f197eb4a");
+    // formData.append("access_key", "fa324ca0-2023-4a8c-8a84-0f748fb1bf7a");
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
 
-    // const res = await fetch("https://api.web3forms.com/submit", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //     Accept: "application/json"
-    //   },
-    //   body: json,
-    //   mode: 'no-cors'
-    // }).then((res) => res.json());
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json,
+      mode: 'no-cors'
+    }).then((res) => res.json());
 
-    // if (res.success) {
-    //   console.log("Success", res);
-    // }
+    if (res.success) {
+      console.log("Success", res);
+    }
   };
 
 

@@ -48,10 +48,15 @@
   background-color: #be14ef;
   border-radius: 25px;
   cursor: pointer;
+}
+
+.navbar-resume a {
+  color: white;
+  text-decoration: none;
   transition: 0.5s;
 }
 
-.navbar-resume:hover {
+.navbar-resume a:hover {
   color: black;
 }
 

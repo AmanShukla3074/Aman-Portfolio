@@ -12,7 +12,7 @@ const Hero = () => {
         <p className="hero-info">
           I'm a full stack web developer and software engineer with a passion
           for creating dynamic and responsive web applications. As a fresher, I
-          have a solid foundation in both front-end and back-end technologies.constantly learning and growing in this ever-evolving field.
+          have a solid foundation in both front-end and back-end technologies. Constantly learning and growing in this ever-evolving field.
         </p>
         <div className="social-links">
         <a href="https://www.linkedin.com/in/aman-shukla3074" target="_blank" rel="noopener noreferrer">

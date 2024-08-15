@@ -42,7 +42,7 @@ const Projects = () => {
                 </div>
             </div>
             <div className="project-details">
-            UKA is a comprehensive platform offering a diverse range of services, including e-commerce, movie ticket booking, and music streaming.Developed a responsive web application utilizing Django REST Framework as the backend and React for the front-end, creating a seamless and dynamic user experience.Utilized the layout editor to create a UI for the application in order to allow different scenes to interact with each other.
+            UKA is a comprehensive platform offering a diverse range of services, including e-commerce, movie ticket booking, and music streaming.Developed a web application utilizing Django REST Framework as the backend and React for the front-end, creating a seamless and dynamic user experience.
 
             </div>
             <div className="project-techs">
