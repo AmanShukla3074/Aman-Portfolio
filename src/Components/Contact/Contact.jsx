@@ -3,6 +3,7 @@ import { CiMail } from "react-icons/ci";
 import { IoCallOutline, IoLocationOutline } from "react-icons/io5";
 import './Contact.css'
 import emailjs from '@emailjs/browser'
+import { toast } from "react-toastify";
 const Contact = () => { 
 
   // const [user_name,setContactData] = useState([{user_name:'',user_email:'',message:''}])
@@ -14,9 +15,9 @@ const Contact = () => {
   const onSubmit = (event) => {
     event.preventDefault();
 
-    const serviceId = import.meta.env.EMAILJS_SERVICE_ID
-    const templeteId = import.meta.env.EMAILJS_TEMPLATE_ID
-    const publickey = import.meta.env.EMAILJS_PUBLIC_KEY
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
+    const templeteId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+    const publickey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
    
 
     const templeteParams ={
@@ -28,13 +29,14 @@ const Contact = () => {
 
     emailjs.send(serviceId,templeteId,templeteParams,publickey)
     .then((res)=>{
-      console.log('email sended',res);
       setEmail('');
       setName('');
       setMessage('');
+      toast.success("Email sent successfully!")
     })
     .catch((err)=>{
       console.log('caught err',err);
+      toast.error('Failed to send email.');
     })
     
   };
@@ -66,11 +68,11 @@ const Contact = () => {
       <div className="contact-right">
         <form onSubmit={onSubmit} className="contact-form">
             <label htmlFor="">Your Name :</label>
-            <input type="text" name="name" placeholder="Enter Your Name" required onChange={(e)=>{setName(e.target.value)}}/>
+            <input type="text" value={name} name="name" placeholder="Enter Your Name" required onChange={(e)=>{setName(e.target.value)}}/>
             <label htmlFor="">Your Email :</label>
-            <input type="email" name="email" placeholder="Enter Your Email"  required  onChange={(e)=>{setEmail(e.target.value)}}/>
+            <input type="email" value={email} name="email" placeholder="Enter Your Email"  required  onChange={(e)=>{setEmail(e.target.value)}}/>
             <label htmlFor="">Your Message :</label>
-            <textarea name="message" rows="10" placeholder="Enter Your Message" required  onChange={(e)=>{setMessage(e.target.value)}}></textarea>
+            <textarea name="message" value={message} rows="10" placeholder="Enter Your Message" required  onChange={(e)=>{setMessage(e.target.value)}}></textarea>
             <button type="submit" className="contact-submit">Send Message</button>
         </form>
       </div>
