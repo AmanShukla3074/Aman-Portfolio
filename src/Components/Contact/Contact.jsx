@@ -12,7 +12,7 @@ const Contact = () => {
   const [message,setMessage] = useState('')
 
 
-  const onSubmit = (event) => {
+  const onSubmit = async(event) => {
     event.preventDefault();
 
     const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
@@ -35,8 +35,10 @@ const Contact = () => {
       toast.success("Email sent successfully!")
     })
     .catch((err)=>{
+      setEmail('');
+      setName('');
+      setMessage('');
       console.log('caught err',err);
-      toast.error('Failed to send email.');
     })
     
   };
