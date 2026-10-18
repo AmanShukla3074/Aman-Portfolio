@@ -1,6 +1,5 @@
 import React from "react";
 import "./About.css";
-// import { IoLocationOutline } from "react-icons/io5";
 
 const About = () => {
   return (
@@ -9,46 +8,62 @@ const About = () => {
 
       <div className="about-info-container">
         <p className="about-info">
-          Hello, My name is Aman Shukla.I'm a web developer and software
-          engineer based in India who exploring industry as full-stack web
-          developer and software engineer with a strong foundation in both
-          front-end and back-end technologies.
+          Hello, My name is Aman Shukla. I'm an MSc Artificial Intelligence &amp;
+          Machine Learning student at Gujarat University, based in Ahmedabad, India.
+          I have a BCA background and hands-on experience in Machine Learning and
+          Computer Vision.
         </p>
 
         <p className="about-info">
-          Graduated with a Bachelor's degree in Computer Applications. With a
-          keen interest in web development, I am dedicated to expanding my
-          skills and knowledge in this field. I focus on creating dynamic and
-          responsive web applications, always exploring new technologies and
-          tools to enhance my work.
+          I'm currently developing an ongoing research project involving computer
+          vision for agricultural applications — specifically detecting animals
+          concealed within crops during harvesting using visible and
+          infrared/thermal imagery. I am also working on building a synthetic
+          custom dataset inspired from real thermal images for this project.
         </p>
 
         <p className="about-info">
-          I'm looking forward to contributing my skills to a dynamic team and
-          growing as a developer. Let's connect and create something awesome
-          together!
+          My interests span Machine Learning, Deep Learning, Computer Vision, and
+          Natural Language Processing. I'm open to AI/ML internship and entry-level
+          opportunities where I can contribute and keep growing. Let's connect and
+          build something impactful together!
         </p>
       </div>
 
       <h2 className="study-header">Education</h2>
+
+      {/* MSc AI & ML - Current */}
       <div className="study-info-wrapper">
         <div className="study-info-right">
           <div className="study-info-degree">
-            Bachelor of Computer Application
+            MSc Artificial Intelligence &amp; Machine Learning
           </div>
           <div className="study-info-collageName">
-            LJ Collage of Computer Applications
+            Gujarat University
           </div>
         </div>
         <div className="study-info-left">
-          <div className="study-info-time">Sep 2021 - May 2024</div>
+          <div className="study-info-time">2025 – 2027</div>
+          <div className="study-info-marks" style={{ color: '#be14ef', fontWeight: '600' }}>Pursuing</div>
+        </div>
+      </div>
+
+      {/* BCA - Completed */}
+      <div className="study-info-wrapper" style={{ marginTop: '20px' }}>
+        <div className="study-info-right">
+          <div className="study-info-degree">
+            Bachelor of Computer Applications (BCA)
+          </div>
+          <div className="study-info-collageName">
+            LJ College of Computer Applications, Gujarat University
+          </div>
+        </div>
+        <div className="study-info-left">
+          <div className="study-info-time">2021 – 2024</div>
           <div className="study-info-marks">CGPA: 8.25</div>
         </div>
       </div>
-      {/* <div className="address">
-          <IoLocationOutline />
-          Nikol, Ahmedabad-382350, Gujarat, India
-        </div> */}
+
     </div>
   );
 };

@@ -9,18 +9,19 @@ const Footer = () => {
       <p className="footer-name">Aman Shukla</p>
       <div className="footer-social-links">
         <a href="https://www.linkedin.com/in/aman-shukla3074" target="_blank" rel="noopener noreferrer">
-        <CiLinkedin className="social-icons" onClick={()=>{navigate()}}/>
+          <CiLinkedin className="social-icons" />
         </a>
         <a href="https://github.com/AmanShukla3074" target="_blank" rel="noopener noreferrer">
-        <FiGithub className="social-icons" onClick={()=>{navigate()}}/>
+          <FiGithub className="social-icons" />
         </a>
         <a href="mailto:amanshukla30704@gmail.com" target="_blank" rel="noopener noreferrer">
-        <CiMail className="social-icons" onClick={()=>{navigate()}}/>
+          <CiMail className="social-icons" />
         </a>
         <a href="https://www.instagram.com/aman_shukla_3074/" target="_blank" rel="noopener noreferrer">
-        <CiInstagram className="social-icons" onClick={()=>{navigate()}}/>
+          <CiInstagram className="social-icons" />
         </a>
-        </div>
+      </div>
+      <p className="footer-copy">&copy; {new Date().getFullYear()} Aman Shukla. All rights reserved.</p>
     </div>
   )
 }

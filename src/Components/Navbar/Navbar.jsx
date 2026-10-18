@@ -4,7 +4,7 @@ import logo from '../../assets/AMAN-Nav-Logo-NoBG.png'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { IoCloseOutline } from 'react-icons/io5'
 import { GiHamburgerMenu } from 'react-icons/gi'
-import resume from '../../assets/aman_shukla_cv_aug.pdf'
+import resume from '../../assets/Aman_Shukla_Resume_WD_AI.pdf'
 const Navbar = () => {
 
   const [menuOpen,setMenuOpen]=useState(false);

@@ -8,6 +8,17 @@
     text-align: center;
 }
 
+.skills-category-label{
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #be14ef;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
 .skills-img-wrapper{
     margin-top: 40px;
     display: flex;

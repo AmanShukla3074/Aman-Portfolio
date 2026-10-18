@@ -28,7 +28,28 @@ margin-bottom: 10px;
     justify-content: center;
     gap: 20px;
     font-size: 30px;
-    margin-top: 60px;
+    margin-top: 40px;
+}
+
+.hero-buttons{
+    margin-top: 25px;
+}
+
+.hero-resume-btn{
+    display: inline-block;
+    padding: 10px 28px;
+    background-color: #be14ef;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.4s;
+}
+
+.hero-resume-btn:hover{
+    background-color: white;
+    color: #be14ef;
 }
 
 .social-icons{
